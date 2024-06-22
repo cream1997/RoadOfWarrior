@@ -1,0 +1,15 @@
+{
+  "name": "row-frontend",
+  "version": "1.0.0",
+  "description": "road of warrior frond app",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "cream",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^31.0.2"
+  }
+}
