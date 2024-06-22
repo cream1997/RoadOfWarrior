@@ -3,15 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <!-- todo 取消注释 -->
+    <!--    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">-->
     <title>Road Of Warrior</title>
+    <style>
+        .login-form {
+            width: 400px;
+            height: 200px;
+            background: lightpink;
+            position: fixed;
+            left: calc(50vw - 200px);
+            top: calc(50vh - 100px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .login-btn{
+            margin-top: 5px;
+        }
+    </style>
 </head>
 <body>
-<h1>Hello World!</h1>
-We are using Node.js <span id="node-version"></span>,
-Chromium <span id="chrome-version"></span>,
-and Electron <span id="electron-version"></span>.
+<form class="login-form">
+    <p class="title">登录/注册</p>
+    <div>
+        <label for="username">账号:</label>
+        <input id="username" type="text"><br/>
+    </div>
+    <div>
+        <label for="password">密码:</label>
+        <input id="password" type="password"><br/>
+    </div>
+    <div class="login-btn">
+        <button>登录</button>
+        <button>注册</button>
+    </div>
 
+</form>
 <!--您也可以此进程中运行其他文件-->
 <script src="./renderer.js"></script>
 </body>
