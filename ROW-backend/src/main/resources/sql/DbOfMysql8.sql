@@ -1,4 +1,4 @@
-CREATE TABLE `row`.t_user
+CREATE TABLE IF NOT EXISTS `row`.t_user
 (
     id       BIGINT      NOT NULL,
     username varchar(50) NOT NULL,
