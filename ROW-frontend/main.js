@@ -7,4 +7,16 @@ const createWindow = () => {
 
 app.whenReady().then(() => {
     createWindow()
+    // 为macOS做特殊处理
+    app.on("activate", () => {
+        if (BrowserWindow.getAllWindows().length === 0) {
+            createWindow();
+        }
+    })
+})
+
+app.on("window-all-closed", () => {
+    if (process.platform !== "darwin") { //不是macOS
+        app.quit();
+    }
 })
