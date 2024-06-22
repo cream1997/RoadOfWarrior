@@ -2,14 +2,17 @@ const {app, BrowserWindow} = require('electron')
 const path = require("path");
 
 const createWindow = () => {
-    const win = new BrowserWindow({
-        width: 800,
-        height: 600,
+    const mainWindow = new BrowserWindow({
+        width: 1000,
+        height: 700,
         webPreferences: {
             preload: path.join(__dirname, "preload.js")
         }
     });
-    win.loadFile("index.html")
+    mainWindow.loadFile("index.html")
+
+    // 打开开发工具
+    mainWindow.webContents.openDevTools()
 }
 
 app.whenReady().then(() => {
@@ -27,3 +30,6 @@ app.on("window-all-closed", () => {
         app.quit();
     }
 })
+
+// 在当前文件中你可以引入所有的主进程代码
+// 也可以拆分成几个文件，然后用 require 导入。
