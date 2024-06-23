@@ -1,4 +1,4 @@
-import PointMeta from "../PointMeta.js";
+import PointMeta from "./PointMeta.js";
 
 export default function drawMapGrid(ctxOf2D, width, height) {
     // todo pointArray用来初始化地图格子对象，后续应该有用
