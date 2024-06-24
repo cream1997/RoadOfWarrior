@@ -7,7 +7,8 @@ const createWindow = () => {
         height: 700,
         webPreferences: {
             preload: path.join(__dirname, "preload.js")
-        }
+        },
+        autoHideMenuBar:true
     });
     mainWindow.loadFile("./pages/index.html")
 
