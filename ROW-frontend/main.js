@@ -9,7 +9,7 @@ const createWindow = () => {
             preload: path.join(__dirname, "preload.js")
         }
     });
-    mainWindow.loadFile("index.html")
+    mainWindow.loadFile("./pages/index.html")
 
     // 打开开发工具
     mainWindow.webContents.openDevTools()
