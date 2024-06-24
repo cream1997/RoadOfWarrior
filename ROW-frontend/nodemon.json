@@ -1,0 +1,11 @@
+{
+  "ignore": [
+    "node_modules",
+    "dis"
+  ],
+  "restartable": "r",
+  "watch": [
+    "*.*"
+  ],
+  "ext": "html,js,css"
+}
