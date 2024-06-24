@@ -4,8 +4,9 @@
   "description": "road of warrior frond app",
   "main": "main.js",
   "scripts": {
-    "start": "electron-forge start",
-    "cream-fast-start": "nodemon --exec electron .",
+    "start": "electron .",
+    "start-auto-restart": "nodemon --exec electron .",
+    "start-by-forge": "electron-forge start",
     "test": "echo \"Error: no test specified\" && exit 1",
     "package": "electron-forge package",
     "make": "electron-forge make"
